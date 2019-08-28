@@ -51,24 +51,24 @@ Here is an example of an original image, grayscale transformation and an normali
 
 My final model consisted of the following layers:
 
-| Layer         		|     Description	        					|
-|:---------------------:|:---------------------------------------------:|
-| Input         		| 32x32x1 normalized grayscale image   	    	|
-| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	|
-| RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				    |
-| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16 	|
-| RELU					|												|
-| Max pooling	      	| 1x1 stride,  outputs 10x10x16 			    |
-| Convolution 5x5	    | 1x1 stride, valid padding, outputs 6x6x32 	|
-| RELU					|												|
-| Max pooling	      	| 1x1 stride,  outputs 6x6x32 				    |
-| Flatten       		| outputs 1152  								|
-| Fully connected		| 1152 to 300  									|
-| Dropout				| 75% keep										|
-| Fully connected		| 300 to 200  									|
-| Dropout				| 75% keep										|
-| Fully connected		| 200 to 43  									|
+| Layer         		|     Description	        					|     num of parameters	    |
+|:---------------------:|:---------------------------------------------:|-----------------------------------------------|
+| Input         		| 32x32x1 normalized grayscale image   	    	| 0   	    |
+| Convolution 5x5     	| 1x1 stride, valid padding, outputs 28x28x6 	| 156 |
+| RELU					|												|  |
+| Max pooling	      	| 2x2 stride,  outputs 14x14x6 				    | 0 				   |
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 10x10x16 	| 416 |
+| RELU					|												|												|
+| Max pooling	      	| 1x1 stride,  outputs 10x10x16 			    | 0 			   |
+| Convolution 5x5	    | 1x1 stride, valid padding, outputs 6x6x32 	| 832 |
+| RELU					|												|												|
+| Max pooling	      	| 1x1 stride,  outputs 6x6x32 				    | 0 				   |
+| Flatten       		| outputs 1152  								| 0  							|
+| Fully connected		| 1152 to 300  									| 345601  			|
+| Dropout				| 75% keep										| 										|
+| Fully connected		| 300 to 200  									| 60001  				|
+| Dropout				| 75% keep										| 										|
+| Fully connected		| 200 to 43  									| 8601  			|
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -80,9 +80,9 @@ My final model results were:
 
 - training set accuracy of 100%
 
-- validation set accuracy of 96.3% 
+- validation set accuracy of 96.5% 
 
-- test set accuracy of 94.4%
+- test set accuracy of 94.7%
 
 If an iterative approach was chosen:
 
